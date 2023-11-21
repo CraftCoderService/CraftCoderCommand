@@ -47,7 +47,8 @@ public abstract class CraftCoderCommand implements CommandExecutor, TabCompleter
 
     static {
         // Initialize the command map
-        if (Bukkit.getPluginManager() instanceof SimplePluginManager manager) {
+        if (Bukkit.getPluginManager() instanceof SimplePluginManager) {
+            final SimplePluginManager manager = (SimplePluginManager) Bukkit.getPluginManager();
 
             try {
                 final Field field = SimplePluginManager.class.getDeclaredField("commandMap");
